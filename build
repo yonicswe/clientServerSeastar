@@ -1,0 +1,7 @@
+#!/bin/bash
+clang++ -o server -ggdb server.cpp $(pkg-config --libs --static ~/devel/seastar/build/debug/seastar.pc) -std=gnu++17 -U_FORTIFY_SOURCE -Wno-uninitialized -DSEASTAR_SSTRING -Wno-error=unused-result  -fsanitize=address -fsanitize=undefined -fno-sanitize=vptr -DSEASTAR_API_LEVEL=2 -DSEASTAR_DEBUG -DSEASTAR_DEFAULT_ALLOCATOR -DSEASTAR_DEBUG_SHARED_PTR -DSEASTAR_SHUFFLE_TASK_QUEUE -DSEASTAR_TYPE_ERASE_MORE -DFMT_LOCALE -pthread -I/home/yonic/devel/seastar/include -I/home/yonic/devel/seastar/build/debug/gen/include -I/usr/include/p11-kit-1 $(cat compile_flags.txt)
+
+
+
+clang++ -o client -ggdb client.cpp $(pkg-config --libs --static ~/devel/seastar/build/debug/seastar.pc) -std=gnu++17 -U_FORTIFY_SOURCE -Wno-uninitialized -DSEASTAR_SSTRING -Wno-error=unused-result  -fsanitize=address -fsanitize=undefined -fno-sanitize=vptr -DSEASTAR_API_LEVEL=2 -DSEASTAR_DEBUG -DSEASTAR_DEFAULT_ALLOCATOR -DSEASTAR_DEBUG_SHARED_PTR -DSEASTAR_SHUFFLE_TASK_QUEUE -DSEASTAR_TYPE_ERASE_MORE -DFMT_LOCALE -pthread -I/home/yonic/devel/seastar/include -I/home/yonic/devel/seastar/build/debug/gen/include -I/usr/include/p11-kit-1 $(cat compile_flags.txt)
+
