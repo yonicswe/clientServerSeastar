@@ -1,0 +1,1 @@
+-std=gnu++17 -std=gnu++17 -U_FORTIFY_SOURCE -DSEASTAR_SSTRING -DSEASTAR_API_LEVEL=2 -DFMT_LOCALE -I/home/yonic/devel/seastar/include -I/home/roman/devel/seastar/build/debug/gen/include -I/usr/include/p11-kit-1
